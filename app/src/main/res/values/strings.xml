@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android Storage Example</string>
+
+    <string name="internal_dir_label">Internal Dir</string>
+    <string name="external_dir_label">External Dir</string>
+    <string name="dir_not_exists">Directory not exists</string>
+    <string name="btn_load_from_internal">Load from Internal</string>
+    <string name="btn_save_to_internal">Save to Internal</string>
 </resources>

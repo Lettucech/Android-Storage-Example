@@ -3,17 +3,94 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="16dp"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:background="@drawable/bg_storage_path"
+            android:elevation="4dp"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute">
+
+        <TextView
+                android:id="@+id/textView_external_dir_label"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/external_dir_label"
+                />
+
+        <TextView
+                android:id="@+id/textView_external_dir"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:background="@drawable/bg_storage_path"
+            android:elevation="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="UnusedAttribute">
+
+        <TextView
+                android:id="@+id/textView_internal_dir_label"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/internal_dir_label"
+                />
+
+        <TextView
+                android:id="@+id/textView_internal_dir"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                />
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/btn_save_to_internal"
+            android:background="@drawable/bg_button_fill"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:text="@string/btn_save_to_internal"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_load_to_internal"/>
+
+    <Button
+            android:id="@+id/btn_load_to_internal"
+            android:background="@drawable/bg_button_fill"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_width="0dp"
+            android:text="@string/btn_load_from_internal"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
